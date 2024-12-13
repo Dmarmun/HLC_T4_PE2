@@ -11,15 +11,15 @@
 </head>
 <body>
     <div class="menu">
-        <button onclick="mostrar(btn=1)" class="btn1">Motrar chat</button>
-        <button onclick="mostrar(btn=0)" class="btn1">Ocultar chat</button>
+        <button onclick="mostrar()" class="btn1">Motrar chat</button>
+        <button onclick="ocultar()" class="btn1">Ocultar chat</button>
     </div>
-    <div class="chat">
-        <div class="mensaje">
-            <input  type="text" id="texto" name="texto" required>
-            <button onclick="setTimeout(() => {
-                bot()
-            }, 500)" class="btn2">Enviar</button>
+    <div id="cuadro" class="cuadro">
+        <div id="chat" class="chat">
+        </div>
+        <div id="mensaje" class="mensaje">
+            <input  type="text" id="usuario" name="usuario" required placeholder="Escribe tu mensaje">
+            <button  id="btn2" class="btn2" onclick="bot()">Enviar</button>
         </div>
     </div>
 

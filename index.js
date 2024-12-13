@@ -15,33 +15,40 @@ function getRandomBotMessage () {
     return messages[Math.floor(Math.random() * messages.length)];
 }
 
-document.getElementById("texto").addEventListener("keydown", function Enter(event) {
+document.getElementById("usuario").addEventListener("keydown", function Enter(event) {
     if (event.key==="Enter") {
     event.preventDefault();
-    setTimeout(() => {
         bot()
-    }, 500)
     }
 });
 
-function mostrar(btn) {
-    const chat=document.getElementById("chat");
-    if (btn==1) {
-        chat.className=visible;
-    }
-    else {if (btn==0){
-        chat.className=oculto;
-    }}
+function mostrar() {
+    document.getElementById("cuadro").classList.remove("oculto");
+    document.getElementById("chat").classList.remove("oculto");
+    document.getElementById("mensaje").classList.remove("oculto");
+    document.getElementById("usuario").classList.remove("oculto");
+    document.getElementById("btn2").classList.remove("oculto");
+}
+
+function ocultar() {
+    document.getElementById("cuadro").classList.add("oculto");
+    document.getElementById("chat").classList.add("oculto");
+    document.getElementById("mensaje").classList.add("oculto");
+    document.getElementById("usuario").classList.add("oculto");
+    document.getElementById("btn2").classList.add("oculto");
 }
 
 function bot() {
-    const usermensaje=document.getElementById("usuario");
-    const div = document.createElement('div');
-    // El contenido el div es igual a al valor del textarea (la nota)
-    div.textContent = textarea.value;
-    // Le aplico al div la clase noNota
-    div.classList.add('noNota');
-    // El id noNota (que es el idv vacio en el que se guardan las notas) inserta antes el div no notas, es decir, la nota que hemos escrito en el textarea
-    document.getElementById('noNota').insertBefore(div, document.getElementById('noNota').firstChild);
-    textarea.value = '';
+    const user=document.getElementById("usuario").value;
+    const botMensaje=document.createElement("div");
+    const userMensaje=document.createElement("div");
+    userMensaje.textContent=user
+    userMensaje.classList.add("user")
+    document.getElementById("chat").insertBefore(userMensaje, document.getElementsByClassName("bot").firstChild);
+    document.getElementById("usuario").value="";
+    botMensaje.textContent=getRandomBotMessage();
+    botMensaje.classList.add("bot")
+    setTimeout(() => {
+        document.getElementById("chat").insertBefore(botMensaje, document.getElementsByClassName("user").firstChild);
+    }, 500)
 }

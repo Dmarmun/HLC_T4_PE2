@@ -1,5 +1,7 @@
 body {
     font-family: "Nunito", sans-serif;
+    margin: 0;
+    background-color: #E2E5E7;
 }
 
 .colors {
@@ -9,4 +11,67 @@ body {
     color: #EAFFD2;
     color: #F9DC6A;
     color: #F8F8FF;
+}
+
+.menu {
+    width: 12%;
+    margin: 0%;
+    padding: 1%;
+    display: grid;
+    text-align: left;
+    background-color: #85CEF0;
+    padding: 1;
+    align-self: flex-start;
+    min-height: 100vh;
+}
+
+.btn1 {
+    background-color:  #E2E5E7;
+    border: 0;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    color: black;
+    height: fit-content;
+}
+
+.oculto {
+    display: none;
+}
+
+.cuadro {
+    display: grid;
+    height: 40%;
+    width: 50%;
+    background-color: white;
+    align-self: flex-end;
+    background-color: white;
+    padding: 2%;
+    box-shadow:  0 0px 0px 0.1px;
+    text-align: left;
+    border-radius: 1%;
+    justify-content: center;
+}
+
+.btn2 {
+    background-color: #F9DC6A;
+    border: 0;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    color: black;
+}
+
+.bot {
+    background-color: #E0F8FC;
+    align-self: flex-end;
+    justify-items: right;
+
+}
+
+.user {
+    background-color: #EAFFD2;
+    align-self: flex-start;
+    justify-items: left;
+
 }
