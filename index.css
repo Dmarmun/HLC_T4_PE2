@@ -41,7 +41,7 @@ body {
 
 .cuadro {
     display: grid;
-    height: 40%;
+    height: 100%;
     width: 50%;
     background-color: white;
     align-self: flex-end;
@@ -51,6 +51,19 @@ body {
     text-align: left;
     border-radius: 1%;
     justify-content: center;
+}
+
+.chat {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.usuario {
+    border: 1;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    color: black;
 }
 
 .btn2 {
@@ -66,12 +79,19 @@ body {
     background-color: #E0F8FC;
     align-self: flex-end;
     justify-items: right;
-
+    text-align: right;
+    padding: 2%;
+    border-radius: 5px;
+    margin: 5%;
 }
 
 .user {
     background-color: #EAFFD2;
     align-self: flex-start;
     justify-items: left;
-
+    text-align: left;
+    padding: 2%;
+    border-radius: 5px;
+    margin: 5%;
+    width: auto;
 }
